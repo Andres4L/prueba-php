@@ -17,8 +17,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="/p-php/prueba-php/public/labores">Labores</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/p-php/prueba-php/public/lotes">Lotes</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="/p-php/prueba-php/public/labores">Labores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/p-php/prueba-php/public/lotes">Lotes</a></li> -->
                     <!-- <li class="nav-item"><a class="nav-link" href="/p-php/prueba-php/public/empleados">Empleados</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="/p-php/prueba-php/public/registros">Registros</a></li>
                 </ul>
