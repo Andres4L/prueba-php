@@ -55,6 +55,7 @@
                         <td><?= $registro["fecha"] ?></td>
                         <td><?= $registro["cantidad"] ?></td>
                         <td><?= $registro["tarifa"] ?> $ </td>
+                        
                         <td>
                             <button onclick="window.location.href='/p-php/prueba-php/public/registros/edit/<?= $registro['id'] ?>'" class="btn btn-warning btn-sm">
                                 <i class="bi bi-pencil"></i>
