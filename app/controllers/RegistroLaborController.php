@@ -2,7 +2,6 @@
 require_once __DIR__ . "/../models/RegistroLabor.php";
 require_once __DIR__ . "/../models/Labor.php";
 require_once __DIR__ . "/../models/Lote.php";
-require_once __DIR__ . "/../models/Empleado.php";
 
 class RegistroLaborController {
     private $model;
@@ -19,10 +18,8 @@ class RegistroLaborController {
     public function create() {
         $laborModel = new Labor();
         $loteModel = new Lote();
-        $empleadoModel = new Empleado();
         $labores = $laborModel->getAll();
         $lotes = $loteModel->getAll();
-        $empleados = $empleadoModel->getAll();
         require __DIR__ . "/../views/registros/create.php";
     }
 
@@ -71,7 +68,7 @@ class RegistroLaborController {
     
         $laborModel = new Labor();
         $loteModel = new Lote();
-        $empleadoModel = new Empleado();
+        //$empleadoModel = new Empleado();
         $labores = $laborModel->getAll();
         $lotes = $loteModel->getAll();
         //$empleados = $empleadoModel->getAll();

@@ -50,7 +50,6 @@
                     <tr>
                         <td><?= $registro["labor"] ?></td>
                         <td><?= $registro["lote"] ?></td>
-                        <!-- <td><?= $registro["empleado"] ?></td> -->
                         <td><?= $registro["empleado_nombre"] ?></td>
                         <td><?= $registro["fecha"] ?></td>
                         <td><?= $registro["cantidad"] ?></td>
@@ -74,7 +73,7 @@
 <script>
 function confirmarEliminar(id) {
     Swal.fire({
-        title: '¿Estás seguro?',
+        title: '¿Seguro que deseas eliminar este registro?',
         text: "Esta acción no se puede deshacer.",
         icon: 'warning',
         showCancelButton: true,

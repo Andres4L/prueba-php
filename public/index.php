@@ -1,24 +1,21 @@
 <?php
 require_once __DIR__ . "/../app/controllers/LaborController.php";
 require_once __DIR__ . "/../app/controllers/LoteController.php";
-require_once __DIR__ . "/../app/controllers/EmpleadoController.php";
 require_once __DIR__ . "/../app/controllers/RegistroLaborController.php";
 
 
 $basePath = "/p-php/prueba-php/public";
 $requestUri = $_SERVER["REQUEST_URI"];
 
-// Asegurarse de que la URL comienza con el basePath antes de reemplazarlo
+
 if (strpos($requestUri, $basePath) === 0) {
     $request = substr($requestUri, strlen($basePath));
 } else {
-    $request = $requestUri; // En caso de acceso directo sin basePath
+    $request = $requestUri;
 }
 
-// Quitar parámetros de la URL (evita errores con query strings)
 $request = strtok($request, '?');
 
-// Si la URL está vacía, asignamos "/"
 if ($request == "") {
     $request = "/";
 }
@@ -58,11 +55,6 @@ switch ($request) {
         $controller->index();
         break;
 
-    case "/empleados":
-        $controller = new EmpleadoController();
-        $controller->index();
-        break;
-
     case "/registros":
         $controller = new RegistroLaborController();
         $controller->index();
@@ -75,11 +67,6 @@ switch ($request) {
 
     case "/lotes/store":
         $controller = new LoteController();
-        $controller->store();
-        break;
-
-    case "/empleados/store":
-        $controller = new EmpleadoController();
         $controller->store();
         break;
 
@@ -96,16 +83,11 @@ switch ($request) {
         require __DIR__ . "/../app/views/lotes/create.php";
         break;
 
-  case "/empleados/create":
-        require __DIR__ . "/../app/views/empleados/create.php";
-        break;
-
   case "/registros/create":
         $controller = new RegistroLaborController();
         $controller->create();
         break;
     
-
     default:
         http_response_code(404);
         echo "<h2>Página no encontrada</h2>";
